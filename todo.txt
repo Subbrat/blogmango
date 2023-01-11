@@ -1,0 +1,9 @@
+per main website theme
+website font
+header
+footer
+small screen top nav
+all buttons in website - colour and behaviour
+
+plogpage-
+the side bar to shift into hamburger on small scree
