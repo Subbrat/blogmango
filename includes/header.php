@@ -1,11 +1,11 @@
 <head>
     <link rel="stylesheet" href="./../css/s6css.css">
 </head>
-<!-- <section class="preloader">
-         <div class="spinner">
-             <span class="spinner-rotate"></span>
-         </div>
-     </section> -->
+<section class="preloader">
+    <div class="spinner">
+        <span class="spinner-rotate"></span>
+    </div>
+</section>
 <section class="navbar custom-navbar" role="navigation">
     <div class="">
         <div class="navbar-header">
