@@ -4,9 +4,6 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     overflow-x: hidden;
   }
-  /*---------------------------------------
-     TYPOGRAPHY
-  -----------------------------------------*/
 /* init  */
  .bgx {
         background: linear-gradient(90deg, #234EB0 3.66%, #9010B0 100%);
@@ -47,9 +44,6 @@
     font-weight: normal;
     line-height: 24px;
   }
-  /*---------------------------------------
-     GENERAL
-  -----------------------------------------*/
   html{
     -webkit-font-smoothing: antialiased;
   }
@@ -230,33 +224,24 @@
   -----------------------------------------*/
   .text-primary { color: #29ca8e; }
   .custom-navbar {
-    background: #ffffff;
-    border-top: 5px solid #29ca8e;
-    border-bottom: 0;
-    -webkit-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
-    box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
-    padding: 12px 0;
+    padding: 0px 0;
     margin-bottom: 0;
     padding: 0;
   }
   .custom-navbar .navbar-brand {
-    color: #454545;
     font-size: 18px;
     font-weight: bold;
     line-height: 40px;
   }
   .custom-navbar .navbar-nav.navbar-nav-first {
-    margin-left: 8em;
+    /* margin-left: 8em; */
   }
   .custom-navbar .navbar-nav.navbar-right li a {
-    padding-right: 12px;
-    padding-left: 12px;
+    /* padding-right: 12px;
+    padding-left: 12px; */
   }
   .custom-navbar .navbar-nav.navbar-right li a .fa {
-    background: #29ca8e;
     border-radius: 100%;
-    color: #ffffff;
     width: 30px;
     height: 30px;
     line-height: 30px;
@@ -267,15 +252,14 @@
   .custom-navbar .nav li a {
     line-height: 40px;
     color: #575757;
-    padding-right: 22px;
-    padding-left: 22px;
+    /* padding-right: 22px;
+    padding-left: 22px; */
   }
   .custom-navbar .navbar-nav > li > a:hover,
   .custom-navbar .navbar-nav > li > a:focus {
     background-color: transparent;
   }
   .custom-navbar .nav li a:hover {
-    background-color: #29ca8e;
     color: #ffffff;
   }
   .custom-navbar .nav li.active > a {
@@ -743,8 +727,8 @@
   }
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     .custom-navbar .nav li a {
-      padding-right: 10px;
-      padding-left: 10px;
+      /* padding-right: 10px;
+      padding-left: 10px; */
     }
   }
   @media only screen and (max-width: 767px) {
