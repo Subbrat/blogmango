@@ -21,7 +21,6 @@ include_once('includes/config.php'); ?>
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="css/s6css.css">
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 
 <body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
@@ -36,7 +35,6 @@ include_once('includes/config.php'); ?>
         </div>
     </section>
     <!-- mid bg section  -->
-
     <div class="s-container bgx s-padding-large">
         <div class="row">
             <!--  incl sidebar -->
@@ -103,7 +101,6 @@ while ($row=mysqli_fetch_array($query)) {
             <?php include_once('includes/sidebar.php');?>
         </div>
     </div>
-
     <br>
     <br>
     <br>

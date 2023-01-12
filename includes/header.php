@@ -1,9 +1,9 @@
      <!-- PRE LOADER -->
-     <!-- <section class="preloader">
+     <section class="preloader">
          <div class="spinner">
              <span class="spinner-rotate"></span>
          </div>
-     </section> -->
+     </section>
      <!-- MENU -->
      <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
          <div class="container">

@@ -28,33 +28,31 @@ include_once('includes/config.php'); ?>
             </div>
         </div>
     </section>
-    <section class="section-background">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-offset-1 col-md-4 col-xs-12 pull-right">
-                    <img src="images/abus.png" class="img-responsive" alt="">
-                </div>
-                <div class="col-md-7 col-xs-12">
-                    <div class="about-info">
-                        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, eos. Corporis, dolor?
-                        </h2>
-                        <?php
+
+    <div class="container s-padding-large ">
+        <div class="row">
+            <div class="col-md-offset-1 col-md-4 col-xs-12 pull-right">
+                <img src="images/abus.png" class="img-responsive" alt="">
+            </div>
+            <div class="col-md-7 col-xs-12">
+                <div class="about-info">
+
+                    <?php
 $pagetype='aboutus';
 $query=mysqli_query($con,"select PageTitle,Description from tblpages where PageName='$pagetype'");
 while($row=mysqli_fetch_array($query))
 {
 ?>
-                        <figure>
-                            <figcaption>
-                                <p><?php echo $row['Description'];?></p>
-                            </figcaption>
-                        </figure>
-                        <?php } ?>
-                    </div>
+                    <figure>
+                        <figcaption>
+                            <p><?php echo $row['Description'];?></p>
+                        </figcaption>
+                    </figure>
+                    <?php } ?>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
     <!-- FOOTER -->
     <?php include_once('includes/footer.php') ?>
     <!-- SCRIPTS -->

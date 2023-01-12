@@ -4,7 +4,7 @@ include_once('includes/config.php'); ?>
 <html lang="en">
 
 <head>
-    <title>About Us • SciAstra</title>
+    <title>Contact Us • SciAstra</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="description" content="">
