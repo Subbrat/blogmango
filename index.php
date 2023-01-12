@@ -4,26 +4,28 @@ include_once('includes/config.php'); ?>
 <html lang="en">
 
 <head>
-    <title>SciAstra Blog Page Test</title>
+    <title>SciAstra Blog Page</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="author" content="">
+    <meta name="description"
+        content="SciAstra is the biggest community of science scholars in India for IISER Aptitude test (IAT), National Entrance Screening Test (NEST), ISI, CMI, and IACS.">
+    <meta name="keywords"
+        content="IAT, iiser aptitude test, NEST, National Entrance Screening Test, ISI, CMI, ISI and CMI Crash Course 2023, IACS, iiser pune.">
+    <link rel="canonical" href="https://www.sciastra.com/" />
+    <meta name="author" content="admins from SciAstra edu pvt ltd">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="icon" href="./ic.png">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/owl.carousel.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="./css/s6css.css">
     <link rel="stylesheet" href="./css/style.css">
-
 </head>
 
 <body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50" class="s-black">
-    <?php include_once('includes/header.php') ?>
+    <?php include_once('./includes/header.php') ?>
     <!-- HOME -->
     <section id="home">
         <div class="row">
@@ -38,8 +40,9 @@ while ($row=mysqli_fetch_array($query)) {
                             <div class="col-md-6 col-sm-12">
                                 <h1><?php echo htmlentities($row['posttitle']);?></h1>
                                 <a href="blog-post-details.php?bid=<?php echo htmlentities($row['pid'])?>"
-                                    class="section-btn btn btn-default">Read Blog</a>
+                                    class="s-button s-round-xlarge s-transparent s-hover-fade s-border">Read Blog..</a>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -106,12 +109,6 @@ while ($row=mysqli_fetch_array($query)) {
                         </div>
                     </div>
                     <!-- bcard end -->
-
-
-
-
-
-
                     <?php } ?>
                 </div>
             </div>
