@@ -1,7 +1,7 @@
 <head>
     <link rel="stylesheet" href="./../css/s6css.css">
 </head>
-<div class="col-lg-3 pull-left col-xs-12 s-red s-card-2 s-padding-large s-margin-bottom">
+<div class="col-lg-3 pull-right col-xs-12 s-green s-card-2 s-padding-large s-margin-bottom">
     <div class="form">
         <form action="search.php" method="post">
             <div class="form-group">

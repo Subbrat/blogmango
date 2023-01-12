@@ -7,9 +7,12 @@ include_once('includes/config.php'); ?>
     <title>Blog Posts • SciAstra Blog Page Test</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="author" content="admin@sciastra">
+    <meta name="description"
+        content="SciAstra is the biggest community of science scholars in India for IISER Aptitude test (IAT), National Entrance Screening Test (NEST), ISI, CMI, and IACS.">
+    <meta name="keywords"
+        content="IAT, iiser aptitude test, NEST, National Entrance Screening Test, ISI, CMI, ISI and CMI Crash Course 2023, IACS, iiser pune.">
+    <link rel="canonical" href="https://www.sciastra.com/" />
+    <meta name="author" content="admins from SciAstra edu pvt ltd">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -18,31 +21,28 @@ include_once('includes/config.php'); ?>
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="css/s6css.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/test.css">
-    <style>
 
-    </style>
 </head>
 
 <body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
     <!-- header  -->
     <?php include_once('includes/header.php') ?>
     <!-- only the top blank section  -->
-    <section>
-        <div class="container">
+    <section class="">
+        <div class="">
             <div class="text-center">
                 <h1>Blog posts</h1>
             </div>
         </div>
     </section>
     <!-- mid bg section  -->
-    <section class="s-brown">
-        <div class="container s-green">
-            <div class="row">
-                <?php include_once('includes/sidebar.php');?>
-                <div class="col-lg-9 col-xs-12">
-                    <div class="row">
-                        <?php
+
+    <div class="s-container bgx s-padding-large">
+        <div class="row">
+            <!--  incl sidebar -->
+            <div class="col-lg-9 col-xs-12">
+                <div class="row">
+                    <?php
      if (isset($_GET['pageno'])) {
             $pageno = $_GET['pageno'];
         } else {
@@ -57,53 +57,53 @@ include_once('includes/config.php'); ?>
 $query=mysqli_query($con,"select tblposts.postedBy ,tblposts.viewCounter,tblposts.id as pid,tblposts.PostTitle as posttitle,tblposts.PostImage,tblcategory.CategoryName as category,tblcategory.id as cid,tblsubcategory.Subcategory as subcategory,tblposts.PostDetails as postdetails,tblposts.PostingDate as postingdate,tblposts.PostUrl as url from tblposts left join tblcategory on tblcategory.id=tblposts.CategoryId left join  tblsubcategory on  tblsubcategory.SubCategoryId=tblposts.SubCategoryId where tblposts.Is_Active=1 order by tblposts.id desc  LIMIT $offset, $no_of_records_per_page");
 while ($row=mysqli_fetch_array($query)) {
 ?>
-                        <!-- the div containing blog blog_cards  -->
-                        <!-- the bcard of blog   -->
-                        <div class="col-sm-4 ">
-                            <div class="bcard s-green">
-                                <img src="admin/postimages/<?php echo htmlentities($row['PostImage']);?>"
-                                    alt="<?php echo htmlentities($row['posttitle']);?>" style="width:100%">
-                                <h3>
-                                    <a
-                                        href="blog-post-details.php?bid=<?php echo htmlentities($row['pid'])?>"><?php echo htmlentities($row['posttitle']);?></a>
-                                </h3>
-                                <div style="padding-bottom:2px;">
-                                    <!-- <span title="Author"><i class="fa fa-user"></i>
+                    <!-- the bcard of blog   -->
+                    <div class="col-sm-4 ">
+                        <div class="bcard s-green">
+                            <img src="admin/postimages/<?php echo htmlentities($row['PostImage']);?>"
+                                alt="<?php echo htmlentities($row['posttitle']);?>" style="width:100%">
+                            <h3>
+                                <a
+                                    href="blog-post-details.php?bid=<?php echo htmlentities($row['pid'])?>"><?php echo htmlentities($row['posttitle']);?></a>
+                            </h3>
+                            <div style="padding-bottom:2px;">
+                                <!-- <span title="Author"><i class="fa fa-user"></i>
                                         <?php echo htmlentities($row['postedBy']);?></span> -->
-                                    <span title="Date"><i class="fa fa-calendar"></i>
-                                        <?php echo htmlentities($row['postingdate']);?></span>
-                                    <span title="Views"><i class="fa fa-eye"></i>
-                                        <?php echo htmlentities($row['viewCounter']);?></span>
-                                </div>
-                                <!-- see if u can take out some starting text from blog -->
-                                <p>
-                                    <a href="blog-post-details.php?bid=<?php echo htmlentities($row['pid'])?>"
-                                        class="s-button s-round-large s-grey s-hover-green ">Read Blog</a>
-                                <div style="padding-bottom:1px;"></div>
-                                </p>
+                                <span title="Date"><i class="fa fa-calendar"></i>
+                                    <?php echo htmlentities($row['postingdate']);?></span>
+                                <span title="Views"><i class="fa fa-eye"></i>
+                                    <?php echo htmlentities($row['viewCounter']);?></span>
                             </div>
+                            <!-- see if u can take out some starting text from blog -->
+                            <p>
+                                <a href="blog-post-details.php?bid=<?php echo htmlentities($row['pid'])?>"
+                                    class="s-button s-round-large s-grey s-hover-green ">Read Blog</a>
+                            <div style="padding-bottom:1px;"></div>
+                            </p>
                         </div>
-                        <!-- bcard end -->
-                        <?php } ?>
                     </div>
-                    <!-- Pagination -->
-                    <ul class="pagination justify-content-center mb-4">
-                        <li class="page-item"><a href="?pageno=1" class="page-link">First</a></li>
-                        <li class="<?php if($pageno <= 1){ echo 'disabled'; } ?> page-item">
-                            <a href="<?php if($pageno <= 1){ echo '#'; } else { echo "?pageno=".($pageno - 1); } ?>"
-                                class="page-link">Prev</a>
-                        </li>
-                        <li class="<?php if($pageno >= $total_pages){ echo 'disabled'; } ?> page-item">
-                            <a href="<?php if($pageno >= $total_pages){ echo '#'; } else { echo "?pageno=".($pageno + 1); } ?> "
-                                class="page-link">Next</a>
-                        </li>
-                        <li class="page-item"><a href="?pageno=<?php echo $total_pages; ?>" class="page-link">Last</a>
-                        </li>
-                    </ul>
+                    <!-- bcard end -->
+                    <?php } ?>
                 </div>
+                <!-- Pagination -->
+                <ul class="pagination justify-content-center mb-4">
+                    <li class="page-item"><a href="?pageno=1" class="page-link">First</a></li>
+                    <li class="<?php if($pageno <= 1){ echo 'disabled'; } ?> page-item">
+                        <a href="<?php if($pageno <= 1){ echo '#'; } else { echo "?pageno=".($pageno - 1); } ?>"
+                            class="page-link">Prev</a>
+                    </li>
+                    <li class="<?php if($pageno >= $total_pages){ echo 'disabled'; } ?> page-item">
+                        <a href="<?php if($pageno >= $total_pages){ echo '#'; } else { echo "?pageno=".($pageno + 1); } ?> "
+                            class="page-link">Next</a>
+                    </li>
+                    <li class="page-item"><a href="?pageno=<?php echo $total_pages; ?>" class="page-link">Last</a>
+                    </li>
+                </ul>
             </div>
+            <?php include_once('includes/sidebar.php');?>
         </div>
-    </section>
+    </div>
+
     <br>
     <br>
     <br>

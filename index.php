@@ -70,11 +70,11 @@ while($row=mysqli_fetch_array($query))
                 </div>
             </div>
         </section>
-        <div class="s-grey s-container s-padding-large">
+        <div class=" s-container s-padding-large bgx">
             <div class="row">
                 <div class="col-md-12 col-sm-12">
-                    <div class="section-title text-center">
-                        <h2>Random Blog posts </h2>
+                    <div class=" text-center">
+                        <h2 style="color:white" ;>Random Blog posts </h2>
                     </div>
                 </div>
                 <?php
@@ -123,7 +123,8 @@ $query=mysqli_query($con,"select PageTitle,Description from tblpages where PageN
 while($row=mysqli_fetch_array($query))
 {
 ?>
-                        <h2>Contact with us <small>
+                        <h2>Contact us <small>
+                                SciAstra Education Pvt Ltd, Bhubaneswar, Odisha
                                 <!-- text in here -->
                             </small></h2>
                     </div>

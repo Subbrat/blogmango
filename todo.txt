@@ -13,3 +13,5 @@ the blog card has its presense on multiple pages
 Font Family from main page
 
 the image dimension to change after adding header
+
+prevent relaoding after form data send

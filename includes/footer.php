@@ -3,7 +3,7 @@ if($_POST['subscribe']){
 $semail=$_POST['email'];
 $fname=$_POST['fname'];
 $sql=mysqli_query($con,"insert into tblsubscribers(fullName,subscriberEmail) values('$fname','$semail')");
-echo "<script>alert('Subscribed successfully');</script>";
+echo "<script>alert('added to SciAstra newsletter subscription');</script>";
 echo "<script>window.location.href='index.php'</script>";
 }
 ?>
@@ -14,7 +14,7 @@ echo "<script>window.location.href='index.php'</script>";
             <div class="col-md-4 col-sm-6">
                 <div class="footer-info">
                     <div class="section-title">
-                        <h2>Contact Info</h2>
+                        <h2>Contact</h2>
                     </div>
                     <?php
 $pagetype='contactus';
@@ -34,14 +34,14 @@ while($row=mysqli_fetch_array($query))
             <div class="col-md-4 col-sm-6">
                 <div class="footer-info">
                     <div class="footer_menu">
-                        <h2>Quick Links</h2>
+                        <h2>Navigation</h2>
                         <ul>
+                            <li><a href="#" class="s6slide">Top</a></li>
                             <li><a href="index.php">Home</a></li>
                             <li><a href="blog-posts.php">Blog</a></li>
                             <li><a href="about-us.php">About Us</a></li>
                             <li><a href="contact.php">Contact Us</a></li>
                             <li><a href="contact.php">Contact Us</a></li>
-                            <li><a href="#" class="s6slide">Top</a></li>
                         </ul>
                     </div>
                 </div>
@@ -49,7 +49,7 @@ while($row=mysqli_fetch_array($query))
             <div class="col-md-4 col-sm-12">
                 <div class="footer-info newsletter-form">
                     <div class="section-title">
-                        <h2>Newsletter Signup</h2>
+                        <h2>Signup for Newsletter</h2>
                     </div>
                     <div>
                         <div class="form-group">
@@ -58,10 +58,11 @@ while($row=mysqli_fetch_array($query))
                                     id="fname" required>
                                 <input type="email" class="form-control" placeholder="Enter your email" name="email"
                                     id="email" required>
-                                <input type="submit" class="form-control" name="subscribe" id="form-submit"
-                                    value="Send me">
+                                <input type="submit"
+                                    class=" s-button s-round-xlarge s-transparent s-hover-fade s-border"
+                                    name="subscribe" id="form-submit" value="Send me">
                             </form>
-                            <span><sup>*</sup> Please note - we do not spam your email.</span>
+                            <span><sup>*</sup>We aren't going to spam your inbox, chill !</span>
                         </div>
                     </div>
                 </div>
