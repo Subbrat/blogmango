@@ -31,8 +31,8 @@ $wtitle=$row['siteTitle'];
                 <li class="s-hide-small s-hide-medium"><a href="index.php"> <img
                             src="admin/assets/images/<?php echo $logo;?>" width="50"></a></li>
             </ul>
-            <ul class="nav navbar-nav navbar-nav-first s-right">
-                <li> <a href="index.php">Home</a></li>
+            <ul class="nav navbar-nav navbar-nav-first s-right s-large">
+                <li><a href="index.php">Home</a></li>
                 <li><a href="blog-posts.php">Blog</a></li>
                 <li><a href="about-us.php">About Us</a></li>
                 <li><a href="contact.php">Contact Us</a></li>
