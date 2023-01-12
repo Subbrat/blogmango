@@ -19,6 +19,7 @@ include_once('includes/config.php'); ?>
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="./css/s6css.css">
     <link rel="stylesheet" href="./css/style.css">
+
 </head>
 
 <body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50" class="s-black">
@@ -79,33 +80,38 @@ while($row=mysqli_fetch_array($query))
 $query=mysqli_query($con,"select tblposts.postedBy,tblposts.viewCounter,tblposts.PostImage,tblposts.id as pid,tblposts.PostTitle as posttitle,tblposts.PostingDate as postingdate from tblposts left join tblcategory on tblcategory.id=tblposts.CategoryId left join  tblsubcategory on  tblsubcategory.SubCategoryId=tblposts.SubCategoryId ORDER BY RAND() limit 3");
 while ($row=mysqli_fetch_array($query)) {
 ?>
-                    <div class="col-md-4 col-sm-4">
-                        <div class="courses-thumb courses-thumb-secondary">
-                            <div class="courses-top">
-                                <div class="courses-image">
-                                    <img src="admin/postimages/<?php echo htmlentities($row['PostImage']);?>"
-                                        width="370" height="300">
-                                </div>
-                                <div class="courses-date">
-                                    <span title="Author"><i class="fa fa-user"></i>
-                                        <?php echo htmlentities($row['postedBy']);?></span>
-                                    <span title="Date"><i class="fa fa-calendar"></i>
-                                        <?php echo htmlentities($row['postingdate']);?></span>
-                                    <span title="Views"><i class="fa fa-eye"></i>
-                                        <?php echo htmlentities($row['viewCounter']);?></span>
-                                </div>
+                    <!-- the bcard of blog   -->
+                    <div class="col-sm-4 ">
+                        <div class="bcard s-green">
+                            <img src="admin/postimages/<?php echo htmlentities($row['PostImage']);?>"
+                                alt="<?php echo htmlentities($row['posttitle']);?>" style="width:100%">
+                            <h3>
+                                <a
+                                    href="blog-post-details.php?bid=<?php echo htmlentities($row['pid'])?>"><?php echo htmlentities($row['posttitle']);?></a>
+                            </h3>
+                            <div style="padding-bottom:2px;">
+                                <!-- <span title="Author"><i class="fa fa-user"></i>
+                                        <?php echo htmlentities($row['postedBy']);?></span> -->
+                                <span title="Date"><i class="fa fa-calendar"></i>
+                                    <?php echo htmlentities($row['postingdate']);?></span>
+                                <span title="Views"><i class="fa fa-eye"></i>
+                                    <?php echo htmlentities($row['viewCounter']);?></span>
                             </div>
-                            <div class="courses-detail">
-                                <h3><a
-                                        href="blog-post-details.php?bid=<?php echo htmlentities($row['pid'])?>"><?php echo htmlentities($row['posttitle']);?></a>
-                                </h3>
-                            </div>
-                            <div class="courses-info">
+                            <!-- see if u can take out some starting text from blog -->
+                            <p>
                                 <a href="blog-post-details.php?bid=<?php echo htmlentities($row['pid'])?>"
-                                    class="section-btn btn btn-primary btn-block">Read More</a>
-                            </div>
+                                    class="s-button s-round-large s-grey s-hover-green ">Read Blog</a>
+                            <div style="padding-bottom:1px;"></div>
+                            </p>
                         </div>
                     </div>
+                    <!-- bcard end -->
+
+
+
+
+
+
                     <?php } ?>
                 </div>
             </div>

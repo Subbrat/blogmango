@@ -2,6 +2,7 @@
 include_once('includes/config.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Blog Posts • SciAstra Blog Page Test</title>
     <meta charset="UTF-8">
@@ -18,7 +19,11 @@ include_once('includes/config.php'); ?>
     <link rel="stylesheet" href="css/s6css.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/test.css">
+    <style>
+
+    </style>
 </head>
+
 <body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
     <!-- header  -->
     <?php include_once('includes/header.php') ?>
@@ -43,7 +48,7 @@ include_once('includes/config.php'); ?>
         } else {
             $pageno = 1;
         }
-        $no_of_records_per_page = 8;
+        $no_of_records_per_page = 9;
         $offset = ($pageno-1) * $no_of_records_per_page;
         $total_pages_sql = "SELECT COUNT(*) FROM tblposts where tblposts.Is_Active=1 ";
         $result = mysqli_query($con,$total_pages_sql);
@@ -52,37 +57,33 @@ include_once('includes/config.php'); ?>
 $query=mysqli_query($con,"select tblposts.postedBy ,tblposts.viewCounter,tblposts.id as pid,tblposts.PostTitle as posttitle,tblposts.PostImage,tblcategory.CategoryName as category,tblcategory.id as cid,tblsubcategory.Subcategory as subcategory,tblposts.PostDetails as postdetails,tblposts.PostingDate as postingdate,tblposts.PostUrl as url from tblposts left join tblcategory on tblcategory.id=tblposts.CategoryId left join  tblsubcategory on  tblsubcategory.SubCategoryId=tblposts.SubCategoryId where tblposts.Is_Active=1 order by tblposts.id desc  LIMIT $offset, $no_of_records_per_page");
 while ($row=mysqli_fetch_array($query)) {
 ?>
-                        <!-- the div containing blog cards  -->
-                        <div class="col-sm-6 s-blue s-padding s-round-large s-margin-bottom s-container"
-                            style="height:550px;">
-                            <div class="courses-thumb courses-thumb-secondary s-pink">
-                                <div class="courses-top s-green">
-                                    <div class="courses-image">
-                                        <img src="admin/postimages/<?php echo htmlentities($row['PostImage']);?>"
-                                            alt="<?php echo htmlentities($row['posttitle']);?>" width="400"
-                                            height="300">
-                                    </div>
-                                    <div class="courses-date">
-                                        <span title="Author"><i class="fa fa-user"></i>
-                                            <?php echo htmlentities($row['postedBy']);?></span>
-                                        <span title="Date"><i class="fa fa-calendar"></i>
-                                            <?php echo htmlentities($row['postingdate']);?></span>
-                                        <span title="Views"><i class="fa fa-eye"></i>
-                                            <?php echo htmlentities($row['viewCounter']);?></span>
-                                    </div>
+                        <!-- the div containing blog blog_cards  -->
+                        <!-- the bcard of blog   -->
+                        <div class="col-sm-4 ">
+                            <div class="bcard s-green">
+                                <img src="admin/postimages/<?php echo htmlentities($row['PostImage']);?>"
+                                    alt="<?php echo htmlentities($row['posttitle']);?>" style="width:100%">
+                                <h3>
+                                    <a
+                                        href="blog-post-details.php?bid=<?php echo htmlentities($row['pid'])?>"><?php echo htmlentities($row['posttitle']);?></a>
+                                </h3>
+                                <div style="padding-bottom:2px;">
+                                    <!-- <span title="Author"><i class="fa fa-user"></i>
+                                        <?php echo htmlentities($row['postedBy']);?></span> -->
+                                    <span title="Date"><i class="fa fa-calendar"></i>
+                                        <?php echo htmlentities($row['postingdate']);?></span>
+                                    <span title="Views"><i class="fa fa-eye"></i>
+                                        <?php echo htmlentities($row['viewCounter']);?></span>
                                 </div>
-                                <div class="courses-detail">
-                                    <h3><a
-                                            href="blog-post-details.php?bid=<?php echo htmlentities($row['pid'])?>"><?php echo htmlentities($row['posttitle']);?></a>
-                                    </h3>
-                                </div>
-                                <div class="courses-info s-center">
+                                <!-- see if u can take out some starting text from blog -->
+                                <p>
                                     <a href="blog-post-details.php?bid=<?php echo htmlentities($row['pid'])?>"
                                         class="s-button s-round-large s-grey s-hover-green ">Read Blog</a>
-                                    <!-- TO DO button as per main theme  -->
-                                </div>
+                                <div style="padding-bottom:1px;"></div>
+                                </p>
                             </div>
                         </div>
+                        <!-- bcard end -->
                         <?php } ?>
                     </div>
                     <!-- Pagination -->
@@ -158,4 +159,5 @@ while ($row=mysqli_fetch_array($query)) {
     <script src="js/smoothscroll.js"></script>
     <script src="js/custom.js"></script>
 </body>
+
 </html>
