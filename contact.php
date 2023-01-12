@@ -43,27 +43,6 @@ include_once('includes/config.php'); ?>
         </div>
     </section>
     <!-- CONTACT -->
-    <section id="contact">
-        <div class="container">
-            <div class="row">
-                <?php
-$pagetype='contactus';
-$query=mysqli_query($con,"select PageTitle,Description from tblpages where PageName='$pagetype'");
-while($row=mysqli_fetch_array($query))
-{
-?>
-                <div class="col-md-6 col-sm-12">
-                    <p><?php echo $row['Description'];?></p>
-                </div>
-                <div class="col-md-6 col-sm-12">
-                    <div class="contact-image">
-                        <img src="images/contact-1-600x400.jpg" class="img-responsive" alt="">
-                    </div>
-                </div>
-                <?php }?>
-            </div>
-        </div>
-    </section>
     <!-- FOOTER -->
     <?php include_once('includes/footer.php') ?>
     <!-- SCRIPTS -->

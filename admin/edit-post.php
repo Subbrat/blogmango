@@ -30,6 +30,7 @@ $error="Something went wrong . Please try again.";
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -69,6 +70,7 @@ $error="Something went wrong . Please try again.";
     }
     </script>
 </head>
+
 <body class="fixed-left">
     <!-- Begin page -->
     <div id="wrapper">
@@ -243,5 +245,6 @@ while($result=mysqli_fetch_array($ret))
     <!--Summernote js-->
     <script src="../plugins/summernote/summernote.min.js"></script>
 </body>
+
 </html>
 <?php } ?>

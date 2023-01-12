@@ -1,3 +1,6 @@
+<head>
+    <link rel="stylesheet" href="./../css/s6css.css">
+</head>
 <?php error_reporting(0);
 if($_POST['subscribe']){
 $semail=$_POST['email'];
@@ -58,9 +61,8 @@ while($row=mysqli_fetch_array($query))
                                     id="fname" required>
                                 <input type="email" class="form-control" placeholder="Enter your email" name="email"
                                     id="email" required>
-                                <input type="submit"
-                                    class=" s-button s-round-xlarge s-transparent s-hover-fade s-border"
-                                    name="subscribe" id="form-submit" value="Send me">
+                                <input type="submit" class="form-control" name="subscribe" id="form-submit"
+                                    value="Send me">
                             </form>
                             <span><sup>*</sup>We aren't going to spam your inbox, chill !</span>
                         </div>

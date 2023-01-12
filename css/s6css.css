@@ -1317,6 +1317,11 @@
      color: #fff !important;
      background-color: #9c27b0 !important
  }
+  .s-light-purple,
+ .s-hover-light-purple:hover {
+     color: #fff !important;
+     background-color: #1b0d34 !important
+ }
  .s-deep-purple,
  .s-hover-deep-purple:hover {
      color: #fff !important;

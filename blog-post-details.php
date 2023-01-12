@@ -53,7 +53,13 @@ $postid=intval($_GET['bid']);
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <!-- MAIN CSS -->
+    <link rel="stylesheet" href="./css/s6css.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+    .bgw {
+        background-color: #f5f5f5;
+    }
+    </style>
 </head>
 
 <body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
@@ -63,20 +69,25 @@ $currenturl="http://".$_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];;
  $query=mysqli_query($con,"select tblposts.viewCounter,tblposts.PostTitle as posttitle,tblposts.PostImage,tblcategory.CategoryName as category,tblcategory.id as cid,tblsubcategory.Subcategory as subcategory,tblposts.PostDetails as postdetails,tblposts.PostingDate as postingdate,tblposts.PostUrl as url,tblposts.postedBy,tblposts.lastUpdatedBy,tblposts.UpdationDate from tblposts left join tblcategory on tblcategory.id=tblposts.CategoryId left join  tblsubcategory on  tblsubcategory.SubCategoryId=tblposts.SubCategoryId where tblposts.id='$bid' && tblposts.Is_Active=1 ");
 while ($row=mysqli_fetch_array($query)) {
 ?>
-    <section>
-        <div class="container">
+    <section class="bgw">
+        <div class="s-content s-padding-large">
             <h2><?php echo htmlentities($row['posttitle']);?></h2>
-            <p class="lead">
+            <span class="lead s-large">
                 <i class="fa fa-user"></i> <?php echo htmlentities($row['postedBy']);?> &nbsp;&nbsp;&nbsp;
                 <i class="fa fa-file"></i> <?php echo htmlentities($row['category']);?>/
                 <?php echo htmlentities($row['subcategory']); ?>&nbsp;&nbsp;&nbsp;
                 <i class="fa fa-calendar"></i> <?php echo htmlentities($row['postingdate']);?>&nbsp;&nbsp;&nbsp;
                 <i class="fa fa-eye"></i> <?php echo htmlentities($row['viewCounter']);
                     ?>
-            </p>
-            <img src="admin/postimages/<?php echo htmlentities($row['PostImage']);?>" width="100%" alt="">
+            </span>
+            <center>
+                <img src="admin/postimages/<?php echo htmlentities($row['PostImage']);?>" width="80%" alt="">
+
+            </center>
             <br>
-            <p><?php echo $row['postdetails']?></p>
+            <p style="color:black;"><?php echo $row['postdetails'];
+
+            ?></p>
             <br>
             <br>
             <?php } ?>
@@ -104,7 +115,7 @@ while ($row=mysqli_fetch_array($query)) {
  $count=mysqli_num_rows($query);
  ?>
                     <h4>Comments (<?php echo $count;?>)</h4>
-                    <hr color="balck" />
+                    <hr color="black" />
                     <?php
  if($count==0){ ?>
                     <p>No comments found.</p>
@@ -140,7 +151,9 @@ while ($row=mysqli_fetch_array($query)) {
                             <textarea name="comment" class="form-control" rows="10" autocomplete="off"
                                 required></textarea>
                         </div>
-                        <button type="submit" class="section-btn btn btn-primary" name="submit">Submit</button>
+                        <button type="submit"
+                            class="s-button s-transparent s-round-large s-border s-hover-light-purple "
+                            name="submit">Submit</button>
                     </form>
                 </div>
             </div>
