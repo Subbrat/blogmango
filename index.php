@@ -42,7 +42,6 @@ while ($row=mysqli_fetch_array($query)) {
                                 <a href="blog-post-details.php?bid=<?php echo htmlentities($row['pid'])?>"
                                     class="s-button s-round-xlarge s-transparent s-hover-fade s-border">Read Blog..</a>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -51,7 +50,7 @@ while ($row=mysqli_fetch_array($query)) {
         </div>
     </section>
     <main>
-        <section>
+        <section class="">
             <div class="s-container">
                 <div class="row">
                     <div class="col-md-12 col-sm-12">
@@ -71,48 +70,46 @@ while($row=mysqli_fetch_array($query))
                 </div>
             </div>
         </section>
-        <section>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 col-sm-12">
-                        <div class="section-title text-center">
-                            <h2>Random Blog posts </h2>
-                        </div>
+        <div class="s-grey s-container s-padding-large">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="section-title text-center">
+                        <h2>Random Blog posts </h2>
                     </div>
-                    <?php
-$query=mysqli_query($con,"select tblposts.postedBy,tblposts.viewCounter,tblposts.PostImage,tblposts.id as pid,tblposts.PostTitle as posttitle,tblposts.PostingDate as postingdate from tblposts left join tblcategory on tblcategory.id=tblposts.CategoryId left join  tblsubcategory on  tblsubcategory.SubCategoryId=tblposts.SubCategoryId ORDER BY RAND() limit 3");
+                </div>
+                <?php
+$query=mysqli_query($con,"select tblposts.postedBy,tblposts.viewCounter,tblposts.PostImage,tblposts.id as pid,tblposts.PostTitle as posttitle,tblposts.PostingDate as postingdate from tblposts left join tblcategory on tblcategory.id=tblposts.CategoryId left join  tblsubcategory on  tblsubcategory.SubCategoryId=tblposts.SubCategoryId ORDER BY RAND() limit 4");
 while ($row=mysqli_fetch_array($query)) {
 ?>
-                    <!-- the bcard of blog   -->
-                    <div class="col-sm-4 ">
-                        <div class="bcard s-green">
-                            <img src="admin/postimages/<?php echo htmlentities($row['PostImage']);?>"
-                                alt="<?php echo htmlentities($row['posttitle']);?>" style="width:100%">
-                            <h3>
-                                <a
-                                    href="blog-post-details.php?bid=<?php echo htmlentities($row['pid'])?>"><?php echo htmlentities($row['posttitle']);?></a>
-                            </h3>
-                            <div style="padding-bottom:2px;">
-                                <!-- <span title="Author"><i class="fa fa-user"></i>
+                <!-- the bcard of blog   -->
+                <div class="col-sm-3 ">
+                    <div class="bcard s-green">
+                        <img src="admin/postimages/<?php echo htmlentities($row['PostImage']);?>"
+                            alt="<?php echo htmlentities($row['posttitle']);?>" style="width:100%">
+                        <h3>
+                            <a
+                                href="blog-post-details.php?bid=<?php echo htmlentities($row['pid'])?>"><?php echo htmlentities($row['posttitle']);?></a>
+                        </h3>
+                        <div style="padding-bottom:2px;">
+                            <!-- <span title="Author"><i class="fa fa-user"></i>
                                         <?php echo htmlentities($row['postedBy']);?></span> -->
-                                <span title="Date"><i class="fa fa-calendar"></i>
-                                    <?php echo htmlentities($row['postingdate']);?></span>
-                                <span title="Views"><i class="fa fa-eye"></i>
-                                    <?php echo htmlentities($row['viewCounter']);?></span>
-                            </div>
-                            <!-- see if u can take out some starting text from blog -->
-                            <p>
-                                <a href="blog-post-details.php?bid=<?php echo htmlentities($row['pid'])?>"
-                                    class="s-button s-round-large s-grey s-hover-green ">Read Blog</a>
-                            <div style="padding-bottom:1px;"></div>
-                            </p>
+                            <span title="Date"><i class="fa fa-calendar"></i>
+                                <?php echo htmlentities($row['postingdate']);?></span>
+                            <span title="Views"><i class="fa fa-eye"></i>
+                                <?php echo htmlentities($row['viewCounter']);?></span>
                         </div>
+                        <!-- see if u can take out some starting text from blog -->
+                        <p>
+                            <a href="blog-post-details.php?bid=<?php echo htmlentities($row['pid'])?>"
+                                class="s-button s-round-large s-grey s-hover-green ">Read Blog</a>
+                        <div style="padding-bottom:1px;"></div>
+                        </p>
                     </div>
-                    <!-- bcard end -->
-                    <?php } ?>
                 </div>
+                <!-- bcard end -->
+                <?php } ?>
             </div>
-        </section>
+        </div>
     </main>
     <!-- CONTACT -->
     <section id="contact">
@@ -126,7 +123,9 @@ $query=mysqli_query($con,"select PageTitle,Description from tblpages where PageN
 while($row=mysqli_fetch_array($query))
 {
 ?>
-                        <h2>Contact us <small>we love conversations. let us talk!</small></h2>
+                        <h2>Contact with us <small>
+                                <!-- text in here -->
+                            </small></h2>
                     </div>
                     <div class="col-md-12 col-sm-12">
                         <p><?php echo $row['Description'];?></p>
@@ -135,7 +134,7 @@ while($row=mysqli_fetch_array($query))
                 </div>
                 <div class="col-md-6 col-sm-12">
                     <div class="contact-image">
-                        <img src="images/samp2.png" class="img-responsive" alt="Smiling Two Girls">
+                        <img src="images/samp2.png" class="img-responsive">
                     </div>
                 </div>
             </div>

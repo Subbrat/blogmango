@@ -11,3 +11,5 @@ the side bar to shift into hamburger on small scree
 the blog card has its presense on multiple pages
 
 Font Family from main page
+
+the image dimension to change after adding header
