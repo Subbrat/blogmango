@@ -7,3 +7,169 @@ all buttons in website - colour and behaviour
 
 plogpage-
 the side bar to shift into hamburger on small scree
+
+
+
+<body>
+    <!-- Header -->
+    <header
+        class="main__header d-lg-flex justify-content-between align-items-center my-4 w-full z-40 d-none d-sm-none d-md-none">
+        <div class="main__header__logo">
+            <a href="https://sciastra.com/">
+                <img src="./ic.png" class="w-full" alt="">
+            </a>
+        </div>
+        <nav class="main__header__nav flex align-middle">
+            <a class="mx-4 text-uppercase active" href="https://sciastra.com/">Home</a>
+            <a class="mx-4 text-uppercase " href="follow_external.php?req=GqUiF5eBtl">Courses</a>
+            <a class="mx-4 text-uppercase" href="https://sciastra.com/exams/">Exams & Colleges</a>
+            <a class="mx-4 text-uppercase" href="https://sciastra.com/free-materials/">Materials</a>
+            <a class="mx-4 text-uppercase" href="https://sciastra.com/teams/">Team</a>
+            <a class="mx-4 text-uppercase" href="https://sciastra.com/contact/">Contact Us</a>
+            <a class="text-uppercase login-button" href="https://sciastra.com/app/">Login</a>
+        </nav>
+    </header>
+    <!-- Mobile Header -->
+    <div class="mobile__header d-flex d-lg-none">
+        <div class="mobile__header__logo">
+            <a href="https://sciastra.com/">
+                <img src="./ic.png" alt="Logo" class="w-20">
+            </a>
+        </div>
+        <button id="btnop" onclick="openNav()" class="mobile__header__btn">
+        </button>
+    </div>
+    <div id="mobile__header__menu__id" class="mobile__header__menu d-none">
+        <div class="mobile__header__menu__close ">
+            <a href="javascript:void(0)" id="close__mobile__menu__id" class="px-3 py-1 border-black text-lg"><img
+                    src="./Assets/Images/cross.png" alt="" class="w-7 ml-auto"></a>
+        </div>
+        <div class="mobile__header__menu__container text-center mt-40">
+            <ul>
+                <li class=""><a href="https://sciastra.com/" class="text-white text-2xl font-light active">Home</a></li>
+                <li class=""><a href="https://sciastra.com/courses.php"
+                        class="text-white text-2xl font-light">Courses</a></li>
+                <li class=""><a href="https://sciastra.com/exams.php" class="text-white text-2xl font-light">Exams &
+                        Colleges</a></li>
+                <li class=""><a href="https://sciastra.com/free-materials.php"
+                        class="text-white text-2xl font-light">Materials</a></li>
+                <li class=""><a href="https://sciastra.com/teams.php" class="text-white text-2xl font-light">Teams</a>
+                </li>
+                <li class=""><a href="https://sciastra.com/contact.php" class="text-white text-2xl font-light">Contact
+                        Us</a></li>
+            </ul>
+        </div>
+        <div class="mobile__header__bottom text-white text-center">
+            <p class="mobile__header__bottom__content font-semibold">Follow us</p>
+            <div class="d-flex justify-content-evenly">
+                <a href="#"><i class="bi bi-youtube"></i></a>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-twitter"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+    <div id="mobileNav" class="overlay">
+        <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <!-- Overlay content -->
+        <div class="overlay-content">
+            <center>
+                <a href="https://sciastra.com/" class="text-white text-2xl font-light active">Home</a><br>
+                <a href="https://sciastra.com/courses/" class="text-white text-2xl font-light">Courses</a><br>
+                <a href="https://sciastra.com/exams/ " class="text-white text-2xl font-light">Exams & Colleges</a><br>
+                <a href="https://sciastra.com/materials/" class="text-white text-2xl font-light">Materials</a><br>
+                <a href="https://sciastra.com/teams/" class="text-white text-2xl font-light">Teams</a><br>
+                <a href="https://sciastra.com/contact/" class="text-white text-2xl font-light">Contact Us</a><br>
+                <a class="text-uppercase login-button" href="https://sciastra.com/app/">Login</a>
+            </center>
+            <p class="mobile__header__bottom__content font-semibold">Follow us</p>
+            <div class="d-flex justify-content-evenly">
+                <a href="https://sciastra.com/follow_external.php?req=ygIy1k6vyP"><i class="bi bi-youtube"></i></a>
+                <a href="https://sciastra.com/follow_external.php?req=MrrBHi4frT"><i class="bi bi-facebook"></i></a>
+                <a href="https://sciastra.com/follow_external.php?req=FMlxbuQS5w"><i class="bi bi-instagram"></i></a>
+                <a href="https://sciastra.com/follow_external.php?req=x1Luinj8TR"><i class="bi bi-discord"></i></a>
+                <a href="https://sciastra.com/follow_external.php?req=xZrGX4XxE8"><i class="bi bi-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- Mobile Header -->
+    <!-- Header -->
+    <!-- Banner -->
+    <section class="first__section position-relative">
+    </section>
+    <!-- Banner -->
+    <!--  footer start -->
+    <footer class="main__footer pt-5">
+        <div class="main__footer__logo">
+            <a href="follow_external.php?req=eWtniS6JsI"><img src="./ic.png" class="w-20" alt=""></a>
+            <h3 class="text-white">SciAstra</h3>
+        </div>
+        <div class="main__footer__first">
+            <div class="main__footer__first__card">
+                <div class="main__footer__first__card ">
+                    <p class="mb-4 font-semibold fs-5">© SciAstra</p>
+                    <ul class="list-unstyled text-light">
+                        <li class="mb-3"> <a class="text-light" href="https://sciastra.com/">Home</a> </li>
+                        <li class="mb-3"> <a class="text-light" href="https://sciastra.com/courses/">Our Courses</a>
+                        </li>
+                        <li class="mb-3"> <a class="text-light" href="https://sciastra.com/exams/">Exams and
+                                Colleges</a> </li>
+                        <li class="mb-3"> <a class="text-light" href="https://sciastra.com/materials/">Free
+                                Materials</a> </li>
+                        <li class="mb-3"> <a class="text-light" href="https://sciastra.com/teams/">Our Team</a> </li>
+                        <li class="mb-3"> <a class="text-light" href="https://sciastra.com/contact/">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row main__footer__sec position-relative">
+            <div class="col-12 col-lg-3 mt-4 mt-lg-0">
+                <p class="text-center text-lg-start fs-6">SciAstra Education Pvt Ltd, Bhubaneswar, Odisha</p>
+            </div>
+            <div class="col-12 col-lg-3 mt-4 mt-lg-0 text-center text-lg-start">
+            </div>
+            <div class="col-12 col-lg-3 mt-4 mt-lg-0 text-center text-lg-start">
+                <a href="mailto:contact@sciastra.com"
+                    class="fs-6 text-white ps-0 ps-lg-5 text-center text-lg-start">contact@sciastra.com</a>
+            </div>
+            <div class="col-12 col-lg-3 mb-3 mt-4 mt-lg-0">
+                <div class="text-center">
+                    <a class="mx-2 fs-6 text-white" href="https://sciastra.com/follow_external.php?req=ygIy1k6vyP"><i
+                            class="bi bi-youtube"></i></a>
+                    <a class="mx-2 fs-6 text-white" href="https://sciastra.com/follow_external.php?req=MrrBHi4frT"><i
+                            class="bi bi-facebook"></i></a>
+                    <a class="mx-2 fs-6 text-white" href="https://sciastra.com/follow_external.php?req=FMlxbuQS5w"><i
+                            class="bi bi-instagram"></i></a>
+                    <a class="mx-2 fs-6 text-white" href="https://sciastra.com/follow_external.php?req=x1Luinj8TR"><i
+                            class="bi bi-discord"></i></a>
+                    <a class="mx-2 fs-6 text-white" href="https://sciastra.com/follow_external.php?req=xZrGX4XxE8"><i
+                            class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="main__footer__down__strip text-white bg-dark text-center py-4">
+        &copy; Copyright 2022, SciAstra. All rights reserved
+    </div>
+    <!-- Main Footer  -->
+    <!-- Script For Counter -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+    function openNav() {
+        document.getElementById("mobileNav").style.width = "100%";
+        document.getElementById("btnop").style.display = "none";
+    }
+    /* Close when someone clicks on the "x" symbol inside the overlay */
+    function closeNav() {
+        document.getElementById("mobileNav").style.width = "0%";
+        document.getElementById("btnop").style.display = "block";
+    }
+    </script>
+</body>

@@ -21,7 +21,7 @@ include_once('includes/config.php'); ?>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50" class="s-black">
     <?php include_once('includes/header.php') ?>
     <!-- HOME -->
     <section id="home">
