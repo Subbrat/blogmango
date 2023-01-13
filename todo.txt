@@ -16,3 +16,9 @@ the image dimension to change after adding header
 
 prevent relaoding after form data send
 the meta deta -  author description etc
+should the creator of post - admin name in post be hidden?
+
+
+POST DETAILS IMAGE SIZE :
+  475(H)*875(W) for landscape
+  or 500 * 500 for square

@@ -670,17 +670,12 @@
      margin-right: auto
  }
  .s-content {
-     max-width: 980px
+     max-width: 980px;
  } .s-main {
-     max-width: 1300px;
-     /* margin-left: auto; */
-     /* margin-right: auto; */
-     /* max-width: 1000px; */
-     margin: 0 auto;
-     display: grid;
-     gap: .8rem;
-     grid-template-columns: repeat(auto-fit, minmax(210px, 3fr));
- }
+     max-width: 1489px;
+     margin-left: auto;
+     margin-right: auto;
+     padding: 3%;
  }
  .s-auto {
      max-width: 1140px

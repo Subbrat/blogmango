@@ -69,8 +69,9 @@ $currenturl="http://".$_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];;
  $query=mysqli_query($con,"select tblposts.viewCounter,tblposts.PostTitle as posttitle,tblposts.PostImage,tblcategory.CategoryName as category,tblcategory.id as cid,tblsubcategory.Subcategory as subcategory,tblposts.PostDetails as postdetails,tblposts.PostingDate as postingdate,tblposts.PostUrl as url,tblposts.postedBy,tblposts.lastUpdatedBy,tblposts.UpdationDate from tblposts left join tblcategory on tblcategory.id=tblposts.CategoryId left join  tblsubcategory on  tblsubcategory.SubCategoryId=tblposts.SubCategoryId where tblposts.id='$bid' && tblposts.Is_Active=1 ");
 while ($row=mysqli_fetch_array($query)) {
 ?>
-    <section class="bgw">
-        <div class="s-content s-padding-large">
+    <div class="bgw">
+        <div class="s-main">
+            <!--  capitalise the title & change image size-->
             <h2><?php echo htmlentities($row['posttitle']);?></h2>
             <span class="lead s-large">
                 <i class="fa fa-user"></i> <?php echo htmlentities($row['postedBy']);?> &nbsp;&nbsp;&nbsp;
@@ -80,12 +81,16 @@ while ($row=mysqli_fetch_array($query)) {
                 <i class="fa fa-eye"></i> <?php echo htmlentities($row['viewCounter']);
                     ?>
             </span>
+            <br>
+            <br>
+            <br>
             <center>
-                <img src="admin/postimages/<?php echo htmlentities($row['PostImage']);?>" width="80%" alt="">
+                <img src="admin/postimages/<?php echo htmlentities($row['PostImage']);?>" width="96%" alt="">
 
             </center>
             <br>
-            <p style="color:black;"><?php echo $row['postdetails'];
+            <br>
+            <p style="color:black;font-size:large"><?php echo $row['postdetails'];
 
             ?></p>
             <br>
@@ -158,15 +163,15 @@ while ($row=mysqli_fetch_array($query)) {
                 </div>
             </div>
         </div>
-    </section>
-    <!-- FOOTER -->
-    <?php include_once('includes/footer.php') ?>
-    <!-- SCRIPTS -->
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/smoothscroll.js"></script>
-    <script src="js/custom.js"></script>
+        </section>
+        <!-- FOOTER -->
+        <?php include_once('includes/footer.php') ?>
+        <!-- SCRIPTS -->
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/smoothscroll.js"></script>
+        <script src="js/custom.js"></script>
 </body>
 
 </html>

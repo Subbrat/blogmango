@@ -9,7 +9,8 @@
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Search for..." name="searchinput">
                     <span class="input-group-btn">
-                        <button class="btn btn-default" type="submit" name="submit">Go!</button>
+                        <button class="btn s-button s-light-purple s-hover-purple" type="submit"
+                            name="submit">search</button>
                     </span>
                 </div>
             </div>
