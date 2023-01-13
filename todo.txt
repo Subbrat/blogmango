@@ -15,3 +15,4 @@ Font Family from main page
 the image dimension to change after adding header
 
 prevent relaoding after form data send
+the meta deta -  author description etc
