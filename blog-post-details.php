@@ -41,7 +41,7 @@ $postid=intval($_GET['bid']);
 <html lang="en">
 
 <head>
-    <title>Blog Management System | Post Details</title>
+    <title>SciAstra Blog Page</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="description" content="">
