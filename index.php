@@ -19,7 +19,6 @@ include_once('includes/config.php'); ?>
     <link rel="stylesheet" href="./css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/owl.carousel.css">
     <link rel="stylesheet" href="./css/owl.theme.default.min.css">
-    <!-- MAIN CSS -->
     <link rel="stylesheet" href="./css/s6css.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
